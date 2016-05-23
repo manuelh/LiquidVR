@@ -194,10 +194,7 @@ int _tmain(int argc, _TCHAR* argv[])
 ALVR_RESULT ChangeDrawRepeat(bool bUp)
 {
     int step = 100;
-    if (step == 0)
-    {
-        step = 1;
-    }
+
     if (bUp)
     {
         g_iDrawRepeat += step;
