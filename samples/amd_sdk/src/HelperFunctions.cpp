@@ -240,7 +240,6 @@ void AMD::CaptureFrame( ID3D11Texture2D* pCaptureTexture, WCHAR* pszCaptureFileN
 		TexDesc.CPUAccessFlags = D3D11_CPU_ACCESS_READ;
 		TexDesc.MipLevels = 1;
 		TexDesc.Usage = D3D11_USAGE_DEFAULT;
-		TexDesc.CPUAccessFlags = 0;
 		TexDesc.BindFlags = 0;
 		TexDesc.SampleDesc = SingleSample;
 
