@@ -910,7 +910,6 @@ static void DrawCompositionString( _In_ bool bDrawCompAttr )
         //assert(pszMlcs - g_szMultiLineCompString <=
         //			sizeof(g_szMultiLineCompString) / sizeof(g_szMultiLineCompString[0]) - 2);
         *pszMlcs++ = 0;
-        *pszMlcs++ = 0;
         DWORD x, y;
         x = g_CaretInfo.caretX;
         y = g_CaretInfo.caretY;
