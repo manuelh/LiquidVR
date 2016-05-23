@@ -3213,7 +3213,7 @@ BOOL ShaderCache::CheckErrorFile( Shader* pShader, bool& io_bHasShaderCompilerEr
 				if( m_ErrorDisplayType == ERROR_DISPLAY_IN_MESSAGE_BOX )
 				{
 					wchar_t wsShaderPathName[m_uPATHNAME_MAX_LENGTH];
-					swprintf_s( wsShaderPathName, L"*** The HLSL Shader Compiler has found the following ERROR(s) ***", pShader->m_wsErrorFile );
+					swprintf_s( wsShaderPathName, L"*** The HLSL Shader Compiler has found the following ERROR(s) in [%s\\%s]***", m_wsWorkingDir, pShader->m_wsErrorFile );
 					MessageBoxW( NULL, m_wsLastShaderError, wsShaderPathName, MB_OK );
 				}
 				else if( m_ErrorDisplayType == ERROR_DISPLAY_IN_DEBUG_OUTPUT_AND_BREAK )
@@ -3275,7 +3275,7 @@ void ShaderCache::RenderShaderErrors( CDXUTTextHelper* g_pTxtHelper, int iFontHe
 		m_bHasShaderErrorsToDisplay = false;
 		m_shaderErrorRenderedCount = 0;
 		wchar_t wsShaderPathName[m_uPATHNAME_MAX_LENGTH];
-		swprintf_s( wsShaderPathName, L"*** ERROR(s) Occured ***", m_wsLastShaderError );
+		swprintf_s( wsShaderPathName, L"*** ERROR(s) Occured: %s ***", m_wsLastShaderError );
 		MessageBoxW( NULL, m_wsLastShaderError, wsShaderPathName, MB_OK );
 	}
 
