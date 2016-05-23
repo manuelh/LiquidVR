@@ -312,7 +312,7 @@ ALVR_RESULT Init()
     res = m_pLvrAffinity->EnableGpuAffinity(ALVR_GPU_AFFINITY_FLAGS_NONE);
     CHECK_ALVR_ERROR_RETURN(res, L"EnableGpuAffinity() failed");
 
-    res = res = m_pLvrAffinity->DisableGpuAffinity();
+    res = m_pLvrAffinity->DisableGpuAffinity();
     CHECK_ALVR_ERROR_RETURN(res, L"DisableGpuAffinity() failed");
 
 #endif
