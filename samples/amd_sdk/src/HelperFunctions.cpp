@@ -391,7 +391,7 @@ HRESULT AMD::CompileShaderFromFile( WCHAR* szFileName, LPCSTR szEntryPoint,
     GetFileSizeEx( hFile, &FileSize );
 
     // create enough space for the file data
-    BYTE* pFileData = new BYTE[ FileSize.LowPart ];
+    BYTE* pFileData = new (std::nothrow) BYTE[FileSize.LowPart];
     if( !pFileData )
         return E_OUTOFMEMORY;
 
