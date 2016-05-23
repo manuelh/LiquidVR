@@ -68,6 +68,8 @@ Sprite::Sprite()
 {
     m_pVertexLayout = NULL;
     m_pVertexBuffer = NULL;
+    m_pBorderVertexLayout = NULL;
+    m_pBorderVertexBuffer = NULL;
     m_pcbSprite = NULL;
     
     memset( &s_CBSprite, 0, sizeof( CB_SPRITE ) );
@@ -80,6 +82,7 @@ Sprite::Sprite()
     m_pSpriteAsDepthMSPS = NULL;
     m_pSpriteBorderPS = NULL;
 	m_pSpriteUntexturedPS = NULL;
+    m_pSpriteVolumePS = NULL;
 
 	m_EnableScissorTest = false;
 	m_PointSampleMode = true;

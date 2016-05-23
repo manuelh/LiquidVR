@@ -139,6 +139,8 @@ ShaderCache::Shader::Shader()
     m_pHash = NULL;
     m_uHashLength = 0;
 
+    m_wsCompileStatus = NULL;
+
 	m_pFilenameHash = NULL;
     m_uFilenameHashLength = 0;
 

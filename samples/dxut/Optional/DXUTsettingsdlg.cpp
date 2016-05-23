@@ -42,7 +42,8 @@ CD3DSettingsDlg* WINAPI DXUTGetD3DSettingsDialog()
 //--------------------------------------------------------------------------------------
 CD3DSettingsDlg::CD3DSettingsDlg() :
     m_bActive( false ),
-    m_pActiveDialog( nullptr )
+    m_pActiveDialog( nullptr ),
+    m_nRevertModeTimeout(0)
 {
     m_Levels[0] = D3D_FEATURE_LEVEL_9_1;
     m_Levels[1] = D3D_FEATURE_LEVEL_9_2;

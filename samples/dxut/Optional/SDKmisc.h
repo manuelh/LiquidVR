@@ -26,7 +26,8 @@ struct DXUTCache_Texture
     ID3D11ShaderResourceView* pSRV11;
 
     DXUTCache_Texture() :
-        pSRV11(nullptr)
+        pSRV11(nullptr),
+        bSRGB(false)
     {
     }
 };

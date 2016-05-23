@@ -2253,11 +2253,14 @@ CDXUTDialogResourceManager::CDXUTDialogResourceManager() :
     m_pDepthStencilStateStored11(nullptr),
     m_pRasterizerStateStored11(nullptr),
     m_pBlendStateStored11(nullptr),
+    m_BlendFactorStored11(),
     m_pSamplerStateStored11(nullptr),
     m_pInputLayout11(nullptr),
     m_pVBScreenQuad11(nullptr),
     m_pSpriteBuffer11(nullptr),
-    m_SpriteBufferBytes11(0)
+    m_SpriteBufferBytes11(0),
+    m_pd3d11Device(nullptr),
+    m_pd3d11DeviceContext(nullptr)
 {
 }
 
@@ -4185,6 +4188,10 @@ CDXUTSlider::CDXUTSlider( _In_opt_ CDXUTDialog* pDialog )
     m_nMin = 0;
     m_nMax = 100;
     m_nValue = 50;
+
+    m_nDragX = 0;
+    m_nDragOffset = 0;
+    m_nButtonX = 0;
 
     m_bPressed = false;
 }

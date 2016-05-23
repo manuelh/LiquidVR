@@ -730,7 +730,17 @@ CDXUTSDKMesh::CDXUTSDKMesh() : m_NumOutstandingResources( 0 ),
                                m_pBindPoseFrameMatrices( nullptr ),
                                m_pTransformedFrameMatrices( nullptr ),
                                m_pWorldPoseFrameMatrices( nullptr ),
-                               m_pDev11( nullptr )
+                               m_pDev11( nullptr ),
+                               m_pDevContext11( nullptr ),
+                               m_strPathW(),
+                               m_strPath(),
+                               m_pVertexBufferArray( nullptr ),
+                               m_pIndexBufferArray( nullptr ),
+                               m_pMeshArray( nullptr ),
+                               m_pSubsetArray( nullptr ),
+                               m_pFrameArray( nullptr ),
+                               m_pMaterialArray( nullptr ),
+                               m_pAnimationFrameData( nullptr )
 {
 }
 
